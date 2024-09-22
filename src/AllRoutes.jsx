@@ -8,7 +8,7 @@ const AllRoutes = () => {
     <>
       <Routes>
         {/* Define your app routes here */}
-        <Route path="/" element={<DLogin />} />
+        <Route path="/new_bcc/" element={<DLogin />} />
         <Route path="/dashboard" element={<App />} /> {/* Example for another route */}
         {/* Add more routes as needed */}
         
