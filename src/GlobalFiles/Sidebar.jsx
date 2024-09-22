@@ -109,7 +109,7 @@ const Sidebar = () => {
             </div>
           </Link>
 
-          <Link className="LogOutPath link" onClick={handleLogout} to={"/"}>
+          <Link className="LogOutPath link" onClick={handleLogout} to={"/new_bcc"}>
             <div className="icon">
               <FiLogOut />
             </div>

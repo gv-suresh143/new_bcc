@@ -1,8 +1,8 @@
 import { Table } from "antd";
 import React from "react";
 import { Navigate } from "react-router-dom";
-import Sidebar from "./Sidebar";
-import Topbar from "./Topbar";
+import Sidebar from "../GlobalFiles/Sidebar";
+import Topbar from "../GlobalFiles/Topbar";
 
 const Patient_Details = () => {
   // Hardcoded user data for demo purposes
