@@ -1,14 +1,13 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom'; // Import BrowserRouter
-import App from './App.jsx';
-import DLogin from './DLogin.jsx';
+import AllRoutes from './AllRoutes'; // Import AllRoutes (which defines all the routing logic)
 import './index.css';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter>  {/* Wrap DLogin with BrowserRouter */}
-      <DLogin />
+    <BrowserRouter>  {/* Wrap your routing logic with BrowserRouter */}
+      <AllRoutes />   {/* Render AllRoutes instead of DLogin directly */}
     </BrowserRouter>
   </StrictMode>
 );
