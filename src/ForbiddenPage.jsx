@@ -1,6 +1,31 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 const ForbiddenPage = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Function to check if the screen size is mobile
+  const checkScreenSize = () => {
+    if (window.innerWidth <= 768) {  // Screen width <= 768px is considered mobile
+      setIsMobile(true);
+    } else {
+      setIsMobile(false);
+    }
+  };
+
+  // Check the screen size on initial load and when window is resized
+  useEffect(() => {
+    checkScreenSize(); // Check the screen size on load
+    window.addEventListener('resize', checkScreenSize); // Add event listener for resize
+
+    // Cleanup the event listener
+    return () => window.removeEventListener('resize', checkScreenSize);
+  }, []);
+
+  // If it's not mobile, don't show the ForbiddenPage
+  if (!isMobile) {
+    return null;
+  }
+
   return (
     <div
       style={{
