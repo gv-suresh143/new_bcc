@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Radio } from "antd";
 import banner from "./assets/banner.png";
 import admin from "./assets/admin.jpg";
@@ -21,6 +21,17 @@ const DLogin = () => {
   });
   const [passwordVisible, setPasswordVisible] = useState(false); // State for showing/hiding password
   const navigate = useNavigate();
+
+  // Check if the device is a mobile device
+  const isMobile = window.innerWidth < 768; // Adjust the width as necessary
+
+  useEffect(() => {
+    if (isMobile) {
+      notify("Access forbidden on mobile devices.");
+      // Optionally redirect or close the app
+      window.location.href = "/forbidden"; // Redirect to a forbidden page
+    }
+  }, [isMobile]);
 
   const showDrawer = () => {
     setOpen(true);

@@ -8,9 +8,52 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  font-size: 16px; /* Base font size */
+}
+
+.inputdiv {
+  width: 90%; /* Responsive width */
+  max-width: 400px; /* Limit max width */
+  margin: 1rem auto; /* Center the input */
+}
+
+.inputdiv input {
+  width: 100%; /* Full width */
+  padding: 0.5rem;
+  font-family: "Poppins", sans-serif;
 }
 
 .inputdiv input::placeholder {
-  font-family: "Poppins", sans-serif;
   opacity: 1; /* Firefox */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  body {
+    font-size: 15px; /* Slightly smaller font size for tablets */
+  }
+
+  .inputdiv {
+    width: 80%; /* Adjust width for medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px; /* Smaller font size for mobile */
+  }
+
+  .inputdiv {
+    width: 90%; /* Full width on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 12px; /* Even smaller font size for very small screens */
+  }
+
+  .inputdiv input {
+    padding: 0.4rem; /* Adjust padding for small screens */
+  }
 }

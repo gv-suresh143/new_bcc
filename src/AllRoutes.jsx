@@ -1,6 +1,7 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import DLogin from "./DLogin";
+import ForbiddenPage from './ForbiddenPage'; // Import the forbidden page
 import FrontPage from "./GlobalFiles/FrontPage";
 import Add_Patient from "./Nurse/Add_Patient";
 import Book_Appointment from "./Nurse/Book_Appointment";
@@ -10,7 +11,6 @@ import Messages from "./Nurse/Messages";
 import Schedule from "./Nurse/Schedule";
 import Reports from "./Nurse/Reports";
 import CalendarPage from "./Nurse/CalendarPage";
-import Appointments from "./Nurse/Appointments";
 import Patient_Details from "./Nurse/Patient_Details";
 
 
@@ -30,7 +30,8 @@ const AllRoutes = () => {
         <Route path="/schedule" element={<Schedule />} />
         <Route path="/reports" element={<Reports />} />   
         <Route path="/calendar" element={<CalendarPage />} />      
-        <Route path="/appointments" element={<Appointments />} />
+        <Route path="/forbidden" element={<ForbiddenPage />} />
+        
         
         {/* Fallback route for undefined paths (optional) */}
         <Route path="*" element={<h1>404: Page Not Found</h1>} />

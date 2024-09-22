@@ -10,6 +10,7 @@ import { MdPayment } from "react-icons/md";
 import { RiAdminLine } from "react-icons/ri";
 import Sidebar from "./Sidebar";
 
+
 const FrontPage = () => {
   // Sample patient data
   const patientsData = [
